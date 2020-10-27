@@ -10,7 +10,7 @@ Date: "10.27.2020"
 Source code folder include all the Rscripts to reproduce this work and plot the figures. They are organized and seperated by the different sections of the work. To run the Rscripts, please make sure:
 
 1. All the R packages are installed in the local R environment.
-2. Set the R work diretory into the local folder path, so that the Rscripts can read files.
+2. Set the R work diretory to be the local folder path, so that the Rscripts can read files.
 
 ### Programs
 Error model and optimization framework are two programs that are provided to estimate data uncertainty level from timecourse RNA-seq data and infer GRS from perturbation response data.
