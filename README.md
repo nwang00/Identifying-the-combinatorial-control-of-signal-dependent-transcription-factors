@@ -17,7 +17,7 @@ Error model and optimization framework are two programs that are provided to est
 
 Notes:
 1. To run the programs, please install R first in your local environment.
-2. There is no need to install the programs in local enviroment. User can directly run the programs once has R installed.
-3. Please make sure all the packages are installed in the local R environment to run the programs.
+2. There is no need to install the programs in local enviroment. User can directly run the programs once R installed.
+3. Please make sure all the packages are installed in the local R environment before running the programs.
 
 More details are inclueded in the each section of programs.
