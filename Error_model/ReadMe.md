@@ -47,4 +47,4 @@ Inducible_variance_parameters(x2) 0.269338232494641
 Temporal_varaince 1.56378813855195e-11
 ```
 
-In this file, user can see the inferred data uncertainty represented by multiple parameters (`Basal_variance`,`Inducible_variance_parameters(x0)`,`Inducible_variance_parameters(x1)`,`Inducible_variance_parameters(x2)`,`Temporal_varaince`).
+In this file, user can see the inferred data uncertainty represented by multiple parameters including `Basal_variance`,`Inducible_variance_parameters(x0)`,`Inducible_variance_parameters(x1)`,`Inducible_variance_parameters(x2)`,`Temporal_varaince`.
