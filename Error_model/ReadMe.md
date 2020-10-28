@@ -4,7 +4,7 @@
 To run the error model program, user has to provide both quantified timecourse RNA-seq data and parameter file. 
 
 ### Timecourse RNA-seq data as input file
-Quantified timecourse RNA-seq data is read from gene expression file ("./Gene_exp_sample.txt" in example). Here gene expression is quantified by RPKM. 
+Quantified timecourse RNA-seq data is read from gene expression file ('./Gene_exp_sample.txt' in example). Here gene expression is quantified by RPKM. 
 
 Here is the example of gene expression file:
 ```
@@ -17,7 +17,7 @@ The gene expression file start from Gene ID, then followed by timecourse RNA-seq
 
 
 ### Alter parameters in the parameter file
-All the parameters can be changed in the file called Parameters_ErrorModel.txt. Here, user can specify timecourse for RNA-seq data, numer of replicates of each time points, and file path of gene expression file, through the following parameters: Time, Number_of_replicates, Path_of_gene_expression_file in the parameter file.
+All the parameters can be changed in the file called 'Parameters_ErrorModel.txt'. Here, user can specify timecourse for RNA-seq data, numer of replicates of each time points, and file path of gene expression file, through the following parameters: 'Time', 'Number_of_replicates', 'Path_of_gene_expression_file' in the parameter file.
 
 Here is the example of parameter file:
 ```
