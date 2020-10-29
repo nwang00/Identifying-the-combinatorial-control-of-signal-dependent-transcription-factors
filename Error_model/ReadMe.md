@@ -17,7 +17,7 @@ The gene expression file start from Gene ID, then followed by timecourse RNA-seq
 
 
 ### Alter parameters in the parameter file
-All the parameters can be changed in the file called `Parameters_ErrorModel.txt`. Here, user can specify timecourse for RNA-seq data, numer of replicates of each time points, and file path of gene expression file, through the following parameters: `Time`, `Number_of_replicates`, `Path_of_gene_expression_file` in the parameter file.
+All the parameters can be changed in the file called `Parameters_ErrorModel.txt`. Here, user can specify timecourse for RNA-seq data, number of replicates of each time points, and file path of gene expression file, through the following parameters: `Time`, `Number_of_replicates`, `Path_of_gene_expression_file` in the parameter file.
 
 Here is the example of parameter file:
 ```
@@ -36,7 +36,7 @@ Rscript Error_Model_program.R ./Parameters_ErrorModel.txt
 ```
 
 ### Results
-Inferring data uncertainty for timecourse RNA-seq takes time. For the tested example, user should explect to take couple of hours to obtain the results.
+Inferring data uncertainty for timecourse RNA-seq takes time. For the tested example, user should expect to take couple of hours to obtain the results.
 
 After the completion of running the program, the program will return the inferred data uncertainty to a output text file (`Inferred_uncertainly_level.txt`).
 ```
