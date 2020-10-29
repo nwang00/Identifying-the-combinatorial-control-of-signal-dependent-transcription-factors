@@ -38,7 +38,7 @@ Rscript Error_Model_program.R ./Parameters_ErrorModel.txt
 ### Results
 Inferring data uncertainty for timecourse RNA-seq takes time. For the tested example, user should explect to take couple of hours to obtain the results.
 
-After the completion of running the program, the program will return the inferred data uncertainty to a text file (`Inferred_uncertainly_level.txt`).
+After the completion of running the program, the program will return the inferred data uncertainty to a output text file (`Inferred_uncertainly_level.txt`).
 ```
 Basal_variance 12.5754699109369
 Inducible_variance_parameters(x0) 2e-20
