@@ -3,7 +3,7 @@
 ## Using optimization framework to identify GRS from perturbation response data
 To run the error optimization program, user needs to provide: 1. TF activities, 2. gene expression, 3. data uncertainty of gene expression datasets, 3. file include all the parameters.
 
-### Input file: TF activities
+### Input: TF activities
 Quantified timecourse TF activties read from TF activity file (`./TF_activity_sample.txt` in example). 
 
 Here is the example of TF activties file:
@@ -16,7 +16,7 @@ NFkB_WT_LipidA	NFkB_TRIF-/-_LipidA	NFkB_MYD88_LipidA	NFkB_JNK-/-/ERK-/-_LipidA	N
 ```
 Columns corresponds to different perturbation conditions. Rows corresponds to multiple time points.
 
-### Input file: gene expression
+### Input: gene expression
 Quantified timecourse RNA-seq data is read from gene expression file (`./Gene_exp_fit_sample.txt` in example). Here gene expression is quantified by RPKM. 
 
 Here is the example of gene expression file:
@@ -29,7 +29,7 @@ The gene expression file include one gene expression pattern under multiple pert
 Note:
 Please make sure perturbation conditions and timepoints are consistent between TF activities and gene expression.
 
-### Input file: data uncertainty of gene expression datasets
+### Input: data uncertainty of gene expression datasets
 Estimated data uncertainty for timecourse RNA-seq data is read from data uncertainty file (`./Gene_exp_uncertainty.txt` in example). This result can be obtained from error model program. User needs to cpmpose multiple perturbations together into the data uncertainty file. 
 
 Here is the example of data uncertainty file:
@@ -47,7 +47,7 @@ Note:
 Please make sure perturbation conditions are consistent with previous TF activities and gene expression.
 
 
-### Input file: file include all the parameters
+### Input: file include all the parameters
 All the parameters can be changed in the file called `Parameters_optimization.txt`. Here, user can specify timecourse for RNA-seq data, numer of replicates of each time points, and file path of gene expression file, through the following parameters: `Time`, `Number_of_replicates`, `Path_of_gene_expression_file` in the parameter file.
 
 Here is the example of parameter file:
