@@ -4,9 +4,9 @@
 To run the optimization program, user needs to provide: 1. TF activities, 2. gene expression, 3. data uncertainty of gene expression datasets, 4. parameter file that include all the parameters.
 
 ### Input: TF activities
-Quantified timecourse TF activties read from TF activity file (`./TF_activity_sample.txt` in example). 
+Quantified timecourse TF activities read from TF activity file (`./TF_activity_sample.txt` in example). 
 
-Here is the example of TF activties file:
+Here is the example of TF activities file:
 ```
 NFkB_WT_LipidA	NFkB_TRIF-/-_LipidA	NFkB_MYD88_LipidA	NFkB_JNK-/-/ERK-/-_LipidA	NFkB_Pam3CSK4	IRF3_WT_LipidA	IRF3_TRIF-/-_LipidA	IRF3_MYD88_LipidA	IRF3_JNK-/-/ERK-/-_LipidA	IRF3_Pam3CSK4	MAPK_WT_LipidA	MAPK_TRIF-/-_LipidA	MAPK_MYD88_LipidA	MAPK_JNK-/-/ERK-/-_LipidA	MAPK_Pam3CSK4
 0	0	0	0	0	0	0	0	0	0	0.075009871	0.101798537	0.096549387	0	0.084542562
@@ -30,7 +30,7 @@ Note:
 Please make sure perturbation conditions and timepoints are consistent between TF activities and gene expression.
 
 ### Input: data uncertainty of gene expression datasets
-Estimated data uncertainty for timecourse RNA-seq data is read from data uncertainty file (`./Gene_exp_uncertainty.txt` in example). This result can be obtained from error model program. User needs to compose multiple perturbations together into the data uncertainty file. 
+Estimated data uncertainty is read from data uncertainty file (`./Gene_exp_uncertainty.txt` in example). This result can be obtained from error model program. User needs to compose multiple perturbations together into the data uncertainty file. 
 
 Here is the example of data uncertainty file:
 ```
@@ -41,7 +41,7 @@ Inducible_variance_parameters(x1)	0	0	0	0	0
 Inducible_variance_parameters(x2)	3.50E-02	3.50E-02	4.18E-02	9.69E-02	3.50E-02
 Temporal_varaince	1.56	1.56	3.06	5.63E+01	1.56
 ```
-Columns corresponds to different perturbation conditions. Rows corresponds to different parameters to represent data uncertainty.
+Columns correspond to different perturbation conditions. Rows corresponds to different parameters that represent data uncertainty.
 
 Note:
 Please make sure perturbation conditions are consistent with previous TF activities and gene expression.
@@ -71,9 +71,9 @@ Rscript Optimization_framework.R ./Parameters_optimization.txt
 ```
 
 ### Results
-Identify GRS for gene takes time. For the tested example, user should explect to take about an hour to obtain the results.
+Identifying GRS for a gene takes time. For the tested example, user should expect to take about an hour to obtain the results.
 
-After the completion of running the program, the program will return identified GRS to a output text file (`Optimization_output.txt`).
+After the completion of running the program, the program will return the identified GRS to a output text file (`Optimization_output.txt`).
 ```
 Negative_Log_Likelihood Kd1(TF1) Kd2(TF2) Kd3(TF3) ksyn kdeg
 TF1 AND TF2 AND TF3 46.2971530619891 0.60439190677249 2.7409160279529 2725.71103911315 118.188757607332 0.340846608150139
@@ -86,4 +86,4 @@ TF3 OR TF1 AND TF2 143.330620158025 1.84515101976985 0.0216450236093997 52.75154
 TF3 AND (TF1 OR TF2) 151.446811754697 11.1133441356583 0.729256348468756 0.0151527439980954 14.3524253390713 0.170545972120507
 ```
 
-In this file, user can see the inferred GRS from 8 logic gates (ordered from good fit to poor fit). The output also includes fitness (represented by negative log likelihood), and all the other estimated parameters (`Kd1(TF1)`, `Kd2(TF2)`, `Kd3(TF3)`, `ksyn`, `kdeg`).
+In this file, user can see the identified GRS from 8 logic gates (ordered from good fit to poor fit). The output also includes model fitness (represented by negative log likelihood), and all the other estimated parameters (`Kd1(TF1)`, `Kd2(TF2)`, `Kd3(TF3)`, `ksyn`, `kdeg`).
