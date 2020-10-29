@@ -71,9 +71,9 @@ Rscript Optimization_framework.R ./Parameters_optimization.txt
 ```
 
 ### Results
-Inferring data uncertainty for timecourse RNA-seq takes time. For the tested example, user should explect to take couple of hours to obtain the results.
+Identify GRS for gene takes time. For the tested example, user should explect to take about an hour to obtain the results.
 
-After the completion of running the program, the program will return the inferred data uncertainty to a output text file (`Inferred_uncertainly_level.txt`).
+After the completion of running the program, the program will return identified GRS to a output text file (`Optimization_output.txt`).
 ```
 Negative_Log_Likelihood Kd1(TF1) Kd2(TF2) Kd3(TF3) ksyn kdeg
 TF1 AND TF2 AND TF3 46.2971530619891 0.60439190677249 2.7409160279529 2725.71103911315 118.188757607332 0.340846608150139
@@ -86,4 +86,4 @@ TF3 OR TF1 AND TF2 143.330620158025 1.84515101976985 0.0216450236093997 52.75154
 TF3 AND (TF1 OR TF2) 151.446811754697 11.1133441356583 0.729256348468756 0.0151527439980954 14.3524253390713 0.170545972120507
 ```
 
-In this file, user can see the inferred data uncertainty represented by multiple parameters including `Basal_variance`, `Inducible_variance_parameters(x0)`, `Inducible_variance_parameters(x1)`, `Inducible_variance_parameters(x2)`, `Temporal_varaince`.
+In this file, user can see the inferred GRS from 8 logic gates (ordered from good fit to poor fit). The output also includes fitness (represented by negative log likelihood), and all the other estimated parameters (`Kd1(TF1)`, `Kd2(TF2)`, `Kd3(TF3)`, `ksyn`, `kdeg`).
