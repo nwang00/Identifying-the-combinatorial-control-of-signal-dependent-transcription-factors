@@ -1,0 +1,6 @@
+Path_of_TF_activities_file	./TF_activity_sample.txt
+Path_of_gene_exp_file	./Gene_exp_fit_sample.txt
+Path_of_gene_exp_uncertainty_file	./Gene_exp_uncertainty.txt
+Time_TF	0,15,30,60
+Time_gene_exp	0,15,30,60
+Num_of_perturbations 5

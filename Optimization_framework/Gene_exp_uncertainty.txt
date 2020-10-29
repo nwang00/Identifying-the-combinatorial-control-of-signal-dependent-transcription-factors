@@ -1,0 +1,6 @@
+Uncertainty_class	WT_LipidA	TRIF-/-_LipidA	MYD88_LipidA	JNK-/-/ERK-/-_LipidA	Pam3CSK4
+Basal_variance	0.0253	0.0253	0.0328	0.07016	0.0253
+Inducible_variance_parameters(x0)	0	0	0	0	0
+Inducible_variance_parameters(x1)	0	0	0	0	0
+Inducible_variance_parameters(x2)	3.50E-02	3.50E-02	4.18E-02	9.69E-02	3.50E-02
+Temporal_varaince	1.56	1.56	3.06	5.63E+01	1.56

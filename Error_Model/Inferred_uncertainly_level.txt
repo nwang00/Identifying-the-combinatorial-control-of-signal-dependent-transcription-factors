@@ -1,0 +1,5 @@
+Basal_variance 12.5754699109369
+Inducible_variance_parameters(x0) 2e-20
+Inducible_variance_parameters(x1) 0.00235705950636783
+Inducible_variance_parameters(x2) 0.269338232494641
+Temporal_varaince 1.56378813855195e-11
