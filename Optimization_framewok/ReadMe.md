@@ -1,7 +1,7 @@
 # README
 
 ## Using optimization framework to identify GRS from perturbation response data
-To run the optimization program, user needs to provide: 1. TF activities, 2. gene expression, 3. data uncertainty of gene expression datasets, 3. file include all the parameters.
+To run the optimization program, user needs to provide: 1. TF activities, 2. gene expression, 3. data uncertainty of gene expression datasets, 4. parameter file that include all the parameters.
 
 ### Input: TF activities
 Quantified timecourse TF activties read from TF activity file (`./TF_activity_sample.txt` in example). 
