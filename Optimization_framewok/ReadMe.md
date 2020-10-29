@@ -48,7 +48,7 @@ Please make sure perturbation conditions are consistent with previous TF activit
 
 
 ### Input: file include all the parameters
-All the parameters can be changed in the file called `Parameters_optimization.txt`. Here, user can specify timecourse for RNA-seq data, numer of replicates of each time points, and file path of gene expression file, through the following parameters: `Time`, `Number_of_replicates`, `Path_of_gene_expression_file` in the parameter file.
+All the parameters can be changed in the file called `Parameters_optimization.txt`. Here, user can specify file paths to TF activities, gene expression, data uncertainty of gene expression, timecourse for TF and gene expression, and number of perturbations, through the following parameters: `Path_of_TF_activities_file`, `Path_of_gene_exp_file`, `Path_of_gene_exp_uncertainty_file`, `Time_TF`, `Time_gene_exp`, `Num_of_perturbations` in the parameter file.
 
 Here is the example of parameter file:
 ```
@@ -56,7 +56,7 @@ Path_of_TF_activities_file	./TF_activity_sample.txt
 Path_of_gene_exp_file	./Gene_exp_fit_sample.txt
 Path_of_gene_exp_uncertainty_file	./Gene_exp_uncertainty.txt
 Time_TF	0,15,30,60
-Gene_exp_TF	0,15,30,60
+Time_gene_exp	0,15,30,60
 Num_of_perturbations 5
 ```
 
@@ -64,9 +64,10 @@ Notes:
 Make sure timecourse is ordered from early to the late time points.
 
 ### Command to run the program
-To run the program, simply change the directory to error model folder (`./Error_Model`) and run the following command in terminal. Path of the parameter file (`./Parameters_ErrorModel.txt` in example) can be replaced by user's parameter file path.
+To run the program, simply change the directory to optimization program folder (`./Optimization_framework`) and run the following command in terminal. Path of the parameter file (`./Parameters_optimization.txt` in example) can be replaced by user's parameter file path.
+
 ```
-Rscript Error_Model_program.R ./Parameters_ErrorModel.txt
+Rscript Optimization_framework.R ./Parameters_optimization.txt
 ```
 
 ### Results
