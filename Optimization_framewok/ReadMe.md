@@ -30,7 +30,7 @@ Note:
 Please make sure perturbation conditions and timepoints are consistent between TF activities and gene expression.
 
 ### Input: data uncertainty of gene expression datasets
-Estimated data uncertainty for timecourse RNA-seq data is read from data uncertainty file (`./Gene_exp_uncertainty.txt` in example). This result can be obtained from error model program. User needs to cpmpose multiple perturbations together into the data uncertainty file. 
+Estimated data uncertainty for timecourse RNA-seq data is read from data uncertainty file (`./Gene_exp_uncertainty.txt` in example). This result can be obtained from error model program. User needs to compose multiple perturbations together into the data uncertainty file. 
 
 Here is the example of data uncertainty file:
 ```
