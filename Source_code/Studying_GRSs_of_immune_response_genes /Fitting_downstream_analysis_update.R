@@ -257,6 +257,25 @@ single_TF_per<-length(which(GRS_Sum[,1]>0))/159
 two_TF_per<-length(which(GRS_Sum[,2]>0 & GRS_Sum[,1]==0))/159
 not_fit_per<-length(which(apply(GRS_Sum,1,sum)==0))/159
 three_TF_per<-1-single_TF_per-two_TF_per-not_fit_per
+#############################count types of GRS###################################################
+Gate_count<-GRS_classification[which(apply(GRS_classification[,4:9],1,sum)>0),4:9]
+Gate_count_total<-rbind(Gate_count[,c(1,2)],Gate_count[,c(3,4)],Gate_count[,c(5,6)])
+
+AND_count<-length(intersect(which(Gate_count_total[,1]==0),which(Gate_count_total[,2]==1)))
+OR_count<-length(intersect(which(Gate_count_total[,1]==1),which(Gate_count_total[,2]==0)))
+ANDOR_count<-length(intersect(which(Gate_count_total[,1]==1),which(Gate_count_total[,2]==1)))
+
+df<-data.frame(Gate_type=c("AND","OR","Both"),Count=c(AND_count,OR_count,ANDOR_count))
+df$Gate_type <- factor(df$Gate_type,levels = c("AND","OR","Both"))
+
+pdf("Gate_barplot.pdf",width=4,height=4)
+ggplot(data=df, aes(x=Gate_type, y=Count)) +
+  geom_bar(stat="identity",color="black")+
+  geom_text(aes(label=Count), vjust=1.6, color="white", size=3.5)+
+  scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9"))+
+  theme_minimal()
+dev.off()
+
 ############################################################
 ############################################################
 #########NFkB IRFs synergistically regulated genes##########
@@ -339,3 +358,8 @@ pheatmap(log2(data_plot+0.01),cellheight=8, cellwidth = 3,gaps_row = c(9,18),gap
          show_rownames = T,show_colnames = F,cluster_cols = F,cluster_rows = F,font_size=0.1,
          annotation_row = anno_plot,annotation_legend = T, annotation_names_row = F,annotation_colors = anno_colors)
 graphics.off()
+
+data_plot_org<-data_plot
+anno_plot_org<-anno_plot
+anno_colors_org<-anno_colors
+save(data_plot_org,anno_plot_org,anno_colors_org,file = "Two_genes_examples.RData")
